@@ -48,6 +48,7 @@ $backgroundVideo: rgba(204, 204, 204, 0.23);
 }
 body{
 	background-image: url(../img/hhh.jpg);
+	margin: 0px;
 }
 a{
 	font-family: 'OpenSans', arial;
@@ -218,12 +219,13 @@ header{
 	ul{
 		width: 60%;
 		margin:{
-			top: 67.5px;
+			top: 59.5px;
 			bottom: 80px;
 			left: 100px;
 			right: 15px;
 		}
 		display: inline-block;
+		float: right;
 		.search-ico{
 			img {
 				width: 18px;
@@ -235,18 +237,20 @@ header{
 			}
 		}
 		.donate-header{
-			background-color: #f50049;
-			padding:{
+			background-color: #f90049;
+				padding:{
 				left:10px;
 				right:10px;
 				top: 5px;
 				bottom: 5px;
-			}
+				}
+			letter-spacing: 2px;
 			&:hover{
 				a{
 					color:#fff;
 				}
-				background-color: #990049;
+				background-color: rgba($colorBlack, 0.0);
+				border: 1px solid #f90049;
 			}
 		}
 		li{
@@ -259,6 +263,7 @@ header{
 			line-height: 1.4;
 			letter-spacing: 0.1px;
 			text-transform: uppercase;
+			box-sizing: content-box;
 			a{
 				color: #fff;
 				text-decoration : none;
