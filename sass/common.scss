@@ -1,0 +1,275 @@
+.color{
+	background-color:#fff;
+}
+@import url(http://allfont.ru/allfont.css?fonts=open-sans);
+$colorBlack: #242424;
+$colorPing: #F90049;
+$colorPingHover: #E50043;
+$colorGrey: #CCCCCC;
+$colorWhite: #EAE9E9;
+$backgroundVideo: rgba(204, 204, 204, 0.23);
+
+@mixin blackWhite ($variable){
+	-webkit-filter: grayscale($variable);
+	-moz-filter: grayscale($variable);
+	-ms-filter: grayscale($variable);
+	-o-filter: grayscale($variable);
+	filter: grayscale($variable);
+}
+
+@mixin blur ($variable){
+	-webkit-filter: blur($variable);
+	-moz-filter: blur($variable);
+	-ms-filter: blur($variable);
+	-o-filter: blur($variable);
+	filter: blur($variable);
+}
+
+%font-text{
+	font-family: 'OpenSans', arial;
+	color: #242424;
+	text-align: left;
+	font-weight: 800;
+}
+%button-style{
+	width: 180px;
+  	height: 30px;
+  	color: #ffffff;
+  	text-transform: uppercase;
+  	font-family: 'OpenSans', arial;
+  	font-weight: 600;
+  	text-align: center;
+  	line-height: 1.29;
+  	font-size: 14px;
+  	border: none;
+  	&:hover{
+  		cursor: pointer;
+  	}
+}
+body{
+	background-image: url(../img/hhh.jpg);
+}
+a{
+	font-family: 'OpenSans', arial;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.13;
+	text-align: left;
+	color: $colorPing;
+	&:before{
+		content: '@';
+	}
+	&:hover{
+		color: $colorPingHover;
+	}
+}
+
+.button-style{
+	&-one{
+		@extend %button-style;
+		background-color: $colorBlack;
+		&:hover{background-color: $colorPing;}
+		}
+	&-two{
+		@extend %button-style;
+		background-color: $colorPing;
+		&:hover{background-color: $colorPingHover;}
+		}
+}
+
+h1{
+	@extend %font-text;
+	font-size: 26px;
+	line-height: 1.15;
+}
+h2{
+	@extend %font-text;
+	font-size: 21px;
+	line-height: 1.24;
+  	letter-spacing: -0.3px;
+}
+h3{
+	@extend %font-text;
+	font-size: 16px;
+	line-height: 1.44;
+  	letter-spacing: -0.2px;
+}
+.promo-text{
+	@extend %font-text;
+	font-size: 30px;
+  	line-height: 1.33;
+  	letter-spacing: -0.2px;
+}
+.top-nav-menu{
+	@extend %font-text;
+	font-size: 15px;
+	color: #171717;
+	line-height: 1.4;
+  	letter-spacing: 0.1px;
+  	font-weight: 600;
+}
+p{
+	@extend %font-text;
+	font-size: 15px;
+	line-height: 1.53;
+	letter-spacing: -0.2px;
+	font-weight: 400;
+}
+
+.filter-tag{
+	display: inline-block;
+	width: 141px;
+	height: 30px;
+	background-color: #ffffff;
+	border: 1px solid $colorGrey;
+	text-align:center;
+	.text-tag{
+		font-size: 14px;
+		font-family: 'OpenSans', arial;
+		line-height: 1.29;
+		text-align: center;
+		color: #171717;
+		margin: {
+			top: 6px;
+			bottom: 6px;
+			left: 11px;
+			right: 12.6px;
+		}
+	}
+	&:active{
+		border: 1px solid $colorPing;
+	}
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.checkbox{
+	input[type="checkbox"]{
+		visibility:hidden;
+	}
+	label{
+		width: 18px;
+		height: 18px;
+		background-color:#fff;
+		&:before{
+			content: '✓';
+			color:#fff;
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			background-color: trasparent;
+			border: 1px solid $colorGrey;
+			padding-left: 8px;
+			padding-bottom: 3px;
+			box-sizing: content-box;
+			cursor: pointer;
+		}
+	}
+
+	input[type="checkbox"]:checked + label{
+		&:before{
+			background-color:$colorPing;
+			content: '✓';
+			color:#fff;
+			border: 0px solid black;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.text-in-input{
+  width: 364px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  &:focus{
+  	background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    padding-left: 5px;
+  }
+}
+
+.white-black{
+	@include blackWhite (100%);
+	&:hover{
+		@include blackWhite (0%);
+	}
+}
+
+header{
+    position: relative;
+	margin: 0 auto;
+	height:159px;
+	width: 100%;
+	overflow-y: hidden;
+	z-index:1000;
+	background-color: rgba($colorBlack, 0.9);
+	box-shadow: 0 60px 100px rgba($colorBlack,0.9);
+	margin-bottom: 3px;
+	//-webkit-filter: blur(1px);
+ 	//filter: blur(1px);
+	.logo-header{
+		float:left;
+		margin-left: 53px;
+	}
+	ul{
+		width: 60%;
+		margin:{
+			top: 67.5px;
+			bottom: 80px;
+			left: 100px;
+			right: 15px;
+		}
+		display: inline-block;
+		.search-ico{
+			img {
+				width: 18px;
+				height: 18px;
+				@include blackWhite (100%);
+				&:hover{
+					@include blackWhite (0%);
+				}
+			}
+		}
+		.donate-header{
+			background-color: #f50049;
+			padding:{
+				left:10px;
+				right:10px;
+				top: 5px;
+				bottom: 5px;
+			}
+			&:hover{
+				a{
+					color:#fff;
+				}
+				background-color: #990049;
+			}
+		}
+		li{
+			display:inline-block;
+			margin-left: 1%;
+			color:#fff;
+			font-family: 'OpenSans', arial;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 1.4;
+			letter-spacing: 0.1px;
+			text-transform: uppercase;
+			a{
+				color: #fff;
+				text-decoration : none;
+				&:before{
+					content: "";
+				}
+			}
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+}
+

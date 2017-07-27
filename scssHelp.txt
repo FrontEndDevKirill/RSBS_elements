@@ -1,0 +1,93 @@
+/*$primary-color: #000000;
+$border: 1px solid #543;
+$sum: 2+8/2+10;
+$cn: content;
+%item-base {
+    margin: 10px;
+    color: #564A31;
+    border: 1px solid #000;
+}
+
+@mixin transition($time) {
+    -webkit-webkit: all $time ease;
+    -moz-webkit: all $time ease;
+    -ms-webkit: all $time ease;
+    -o-webkit: all $time ease;
+    webkit: all $time ease;
+}
+
+
+body {
+    background-color: #fff;
+    font-size: 25px;
+    color: #123 + #124410 + #001231;
+    border: $border;
+}
+
+h1 {
+    #{$cn}: "con" + "tent";
+    margin-top: $sum + px;
+}
+
+div {
+    color: $primary-color;
+    .boom {
+        color: lightblue;
+    }
+    ul {
+        li {
+            border: $border;
+            a {
+                color: $primary-color;
+                &:hover {
+                    color: #fff;
+                    font-size: 35px;
+                    margin {
+                        top: 10px;
+                        bottom: 15px;
+                        left: 20px;
+                        right: 30px;
+                    }
+                    background-color: rgba(#000, .02);
+                }
+                &:focus {
+                    @extend %item-base;
+                    background-color: #523441;
+                }
+                &:link {
+                    @extend %item-base;
+                    background-color: #241423;
+                }
+            }
+        }
+    }
+}
+
+p {
+    @if $sum>=10 {
+        color: #000;
+    }
+    @else {
+        color: #fff;
+    }
+}
+
+h3 {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: line-through;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+h6 {
+    @include transition(1s);
+}
+
+@for $i from 2 to 7 {
+    h#{$i} {
+        border: $i+px solid red;
+    }
+}
+*/

@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@import url(http://allfont.ru/allfont.css?fonts=open-sans);
+.color {
+  background-color: #fff;
+}
+
+h1, h2, h3, .promo-text, .top-nav-menu, p {
+  font-family: 'OpenSans', arial;
+  color: #242424;
+  text-align: left;
+  font-weight: 800;
+}
+
+.button-style-one, .button-style-two {
+  width: 180px;
+  height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'OpenSans', arial;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.29;
+  font-size: 14px;
+  border: none;
+}
+
+.button-style-one:hover, .button-style-two:hover {
+  cursor: pointer;
+}
+
+body {
+  background-image: url(../img/hhh.jpg);
+}
+
+a {
+  font-family: 'OpenSans', arial;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.13;
+  text-align: left;
+  color: #F90049;
+}
+
+a:before {
+  content: '@';
+}
+
+a:hover {
+  color: #E50043;
+}
+
+.button-style-one {
+  background-color: #242424;
+}
+
+.button-style-one:hover {
+  background-color: #F90049;
+}
+
+.button-style-two {
+  background-color: #F90049;
+}
+
+.button-style-two:hover {
+  background-color: #E50043;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 1.24;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: -0.2px;
+}
+
+.promo-text {
+  font-size: 30px;
+  line-height: 1.33;
+  letter-spacing: -0.2px;
+}
+
+.top-nav-menu {
+  font-size: 15px;
+  color: #171717;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.53;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+}
+
+.filter-tag {
+  display: inline-block;
+  width: 141px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #CCCCCC;
+  text-align: center;
+}
+
+.filter-tag .text-tag {
+  font-size: 14px;
+  font-family: 'OpenSans', arial;
+  line-height: 1.29;
+  text-align: center;
+  color: #171717;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 11px;
+  margin-right: 12.6px;
+}
+
+.filter-tag:active {
+  border: 1px solid #F90049;
+}
+
+.filter-tag:hover {
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkbox label {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+}
+
+.checkbox label:before {
+  content: '✓';
+  color: #fff;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: trasparent;
+  border: 1px solid #CCCCCC;
+  padding-left: 8px;
+  padding-bottom: 3px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+  background-color: #F90049;
+  content: '✓';
+  color: #fff;
+  border: 0px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.text-in-input {
+  width: 364px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+.text-in-input:focus {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  padding-left: 5px;
+}
+
+.white-black {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.white-black:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+header {
+  position: relative;
+  margin: 0 auto;
+  height: 159px;
+  width: 100%;
+  overflow-y: hidden;
+  z-index: 1000;
+  background-color: rgba(36, 36, 36, 0.9);
+  box-shadow: 0 60px 100px rgba(36, 36, 36, 0.9);
+  margin-bottom: 3px;
+}
+
+header .logo-header {
+  float: left;
+  margin-left: 53px;
+}
+
+header ul {
+  width: 60%;
+  margin-top: 67.5px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+header ul .search-ico img {
+  width: 18px;
+  height: 18px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+header ul .search-ico img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+header ul .donate-header {
+  background-color: #f50049;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header ul .donate-header:hover {
+  background-color: #990049;
+}
+
+header ul .donate-header:hover a {
+  color: #fff;
+}
+
+header ul li {
+  display: inline-block;
+  margin-left: 1%;
+  color: #fff;
+  font-family: 'OpenSans', arial;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header ul li a:before {
+  content: "";
+}
+
+header ul li:hover {
+  cursor: pointer;
+}
