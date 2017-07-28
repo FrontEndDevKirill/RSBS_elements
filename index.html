@@ -2,18 +2,24 @@
 <html>
 	<head>
 		<title>SASS/SCSS</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,200italic,200,600italic,600,400italic|Roboto+Condensed:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/common.css">
+		<script>window.jQuery || document.write('<script src="lib/vendor/jquery-1.11.0.min.js"><script>')</script>
+		<!-- Modernizr must be in the head for HTML5 Shiv to work for older browsers -->
+		<script type='text/javascript'>window.Modernizr || document.write('<script src="lib/vendor/modernizr-2.8.2.min.js">\x3C/script>')</script>
 	</head>
 	<body>
 		<header>
 			<img class="logo-header" src="img/rsbc-logo-header.png" alt="">
 			<ul class="header-menu">
-				<li class="menu-item-header"><a href="#"> home</a></li>
-				<li class="menu-item-header"><a href="#"> access a service</a></li>
-				<li class="menu-item-header"><a href="#"> fundraising</a></li>
-				<li class="menu-item-header"><a href="#"> volunteer</a></li>
-				<li class="menu-item-header"><a href="#"> about us</a></li>
-				<li class="menu-item-header"><a href="#"> contact</a></li>
+				<div class="header-dot"></div>
+				<li class="menu-item-header item1"><a href="#"> home</a></li>
+				<li class="menu-item-header item2"><a href="#"> access a service</a></li>
+				<li class="menu-item-header item3"><a href="#"> fundraising</a></li>
+				<li class="menu-item-header item4"><a href="#"> volunteer</a></li>
+				<li class="menu-item-header item5"><a href="#"> about us</a></li>
+				<li class="menu-item-header item6"><a href="#"> contact</a></li>
 				<li class="donate-header"><a href="#"> donate</a></li>
 				<li class="search-ico">
 					<a href="#">
@@ -21,7 +27,6 @@
 					</a>
 				</li>
 			</ul>
-		</div>
 	</header>
 	<input class="button-style-one" type="button" name="button" value="b1">
 	<br>
@@ -49,10 +54,10 @@
 		<label for="checkbox-1"></label>
 	</div>
 	<br><br>
-			<input class="text-in-input" type="text">
-		<br><br>
-	<div class="color">
+	<input class="text-in-input" type="text">
 
+	<br><br>
+	<div class="color">
 		<h1 class="promo-text">Promo</h1>
 		<h1>H1</h1>
 		<h2>H2</h2>
@@ -75,5 +80,87 @@
 	<br>
 	<br>
 	<br>
+	<footer>
+		<div class="bounds">
+			<div class="table">
+				<div class="block one-half">
+					<div class="padded">
+						<div class="span6 footer-Block-one">
+							<h2>Sign Up to RSBC Newsletters</h2>
+							<p>Your First Name*</p>
+							<input class="text-in-input" type="text">
+							<p>Email Address*</p>
+							<input class="text-in-input" type="email">
+							<p>Tell us about you.</p>
+							<div class="checkbox-block">
+								<div class="checkbox text-checkbox">
+									<input id="checkbox-2" type="checkbox">
+									<label for="checkbox-2"></label>
+								</div>
+								<div class="text-checkbox">
+									<p>I am a vision impaired young person</p>
+								</div>
+							</div>
+							<div class="checkbox-block">
+								<div class="checkbox text-checkbox">
+									<input id="checkbox-3" type="checkbox">
+									<label for="checkbox-3"></label>
+								</div>
+								<div class="text-checkbox">
+									<p>I am the parent of vision impaired young person</p>
+								</div>
+							</div>
+							<div class="checkbox-block">
+								<div class="checkbox text-checkbox">
+									<input id="checkbox-4" type="checkbox">
+									<label for="checkbox-4"></label>
+								</div>
+								<div class="text-checkbox">
+									<p>I am a supporter</p>
+								</div>
+							</div>
+							<div class="checkbox-block">
+								<div class="checkbox text-checkbox">
+									<input id="checkbox-5" type="checkbox">
+									<label for="checkbox-5"></label>
+								</div>
+								<div class="text-checkbox">
+									<p>I work with vision impaired young people</p>
+								</div>
+							</div>
+							<div class="checkbox-block">
+								<div class="checkbox text-checkbox">
+									<input id="checkbox-6" type="checkbox">
+									<label for="checkbox-6"></label>
+								</div>
+								<div class="text-checkbox">
+									<p>I have read and agree to the Terms and conditions</p>
+								</div>
+							</div>
+							<input class="button-style-two" type="button" name="button" value="SING UP FOR NEWS">
+						</div>
+					</div>
+				</div>
+				<div class="block one-half">
+					<div class="padded">
+						<div class="span6 footer-Block-two">
+							<img src="img/rsbc-logo-header.png" alt=""><br>
+							<input class="text-in-input" type="text"> <input class="button-style-two" type="button" name="button" value="SEARCH THE WEBSITE">
+							<ul class="bottom-menu">
+								<li class="bottom-menu-item"><a href="">Contact Us</a></li>
+								<li class="bottom-menu-item"><a href="">ADVICE & SUPPORT</a></li>
+								<li class="bottom-menu-item"><a href="">Vacancies</a></li>
+								<li class="bottom-menu-item"><a href="">Press</a></li>
+								<li class="bottom-menu-item"><a href="">Privacy & Cookies</a></li>
+								<li class="bottom-menu-item"><a href="">Terms & Conditions</a></li>
+							</ul>
+							<p>Royal London Society for Blind People (RLSB) Registered Office: 52-58 Arcola Street, London E8 2DJ. </p>
+							<p>A company limited by guarantee registered in England and Wales (139928) and a charity registered in England and Wales (307892)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

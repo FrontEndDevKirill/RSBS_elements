@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Alert</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+        /* local styles for demo only > */
+        body {font-family:sans-serif;}
+        a {text-decoration:none; background-color:#eee;}
+        /* < for demo only */
+    </style>
+</head>
+<body>
+
+<div>
+    <h4>styledAlert replaces Javascript's native alert() to output a custom styled alert dialogue.</h4>
+
+    <p>Use it like you would a normal alert:<br/>
+        <a href="javascript:alert('Hey!')">alert('Hey!')</a>
+    </p>
+
+    <p>or with custom button text:<br/>
+        <a href="#1" class="eg">alert(msg,btntext)</a>
+    </p>
+
+    <p>or even:<br/>
+        <a href="#2" class="eg">do this</a>
+    </p>
+
+    <p style="font-size:0.8em; color:#666666">Hint: You can also use <kbd>RTN</kbd> or <kbd>ESC</kbd> to close the dialog.</p>
+</div>
+
+
+
+
+<script src="styledAlert.js"></script>
+
+<script>
+/* Just a DEMO */
+    $(function(){
+        var testAlerts = [
+            {msg: "Bog standard."},
+            {msg: "You can optionally pass a second param for the button text.", btn:"Understood"},
+            {msg: "<img src='dancing-spiderman.gif' /><h1>O.M.G</h1><p>You can have HTML in here?!</p>", btn:"Shut up!"}
+        ]
+        $(".eg").on("click",function(e){
+            e.preventDefault();
+            var test = testAlerts[this.hash.replace("#","")];                    
+            alert(test.msg,test.btn);
+        });
+    });
+</script>
+
+
+</body>
+</html>

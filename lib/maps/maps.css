@@ -1,0 +1,19 @@
+/*!
+ *  Stunnplate Maps.js
+ *  Version: 1.0
+ */
+/*
+ *  Last Updated: 27/06/14
+ *  By: Mark
+ *  
+ *  Notes:
+ *  For including Google Maps on site.
+ *
+ *  Changelog:
+ *  27/06/14
+ *  Created
+ */
+
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0;}
+.map{ height: 300px;width:100%;display:inline-block;}

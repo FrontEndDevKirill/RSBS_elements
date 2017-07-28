@@ -1,0 +1,162 @@
+/*!
+ *  Stunnplate nav.css
+ *  Version: 1.1
+ */
+/*
+ *  Last Updated: 27/06/14
+ *  By: Mark
+ *  
+ *  Notes:
+ *  Default nav stylings to include a bar at desktop, switching to a select box on mobile
+ *
+ *  Dependencies:
+ *  core/default.1.1.css; - Requires Show/Hide Media Queries
+ *
+ *  Changelog:
+ *  27/06/14
+ *  
+ *  25/06/14
+ *  Separated files out for use with Sublime Concat and library structure
+ * 
+ */
+
+/*-------------------------------------------------------*/
+/*- MAIN MENU                                           -*/
+/*-------------------------------------------------------*/
+#nav {background-color:#FFFFFF; padding-bottom:0; margin-bottom:30px;}
+
+nav ul.container {margin-bottom:0;}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display:table; 
+    width:100%;
+}
+
+nav ul li {
+    display:table-cell;
+    -webkit-transition: all 1s ease 0s;
+    -mob-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    max-height:none;
+    overflow:hidden;
+}
+
+nav a {
+    display: block;
+    /*margin-bottom: 10px;*/
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    /*color: white;*/
+    background: #CCCCCC;
+}
+
+nav a:hover,
+nav a:visited {
+    /*color: white;*/
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#menu-button{
+    text-align:right;
+    padding:15px;
+}
+
+/*-------------------------------------------------------*/
+/*- MEDIA QUERIES                                       -*/
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*- 1170 Desk Wide                                      -*/
+/*-------------------------------------------------------*/
+
+@media only screen and (max-width: 1170px) {
+
+    nav {
+        
+        /*width: 38%;*/
+    }
+
+}
+/*-------------------------------------------------------*/
+/*- 830                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 830px) { 
+
+}
+
+/*-------------------------------------------------------*/
+/*- 768 Tab Portrait                                    -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+/*        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;*/
+    }
+
+    nav li {display:inline-block; float:left; width:100%;}
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+
+}
+
+/*-------------------------------------------------------*/
+/*- 720                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 720px) {
+    
+}
+
+/*-------------------------------------------------------*/
+/*- 630                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 630px) {
+
+}
+
+/*-------------------------------------------------------*/
+/*- 767 Mobile                                          -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    nav ul li{max-height:0px;
+    -webkit-transition: all 0.8s ease 0s;
+    -mob-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;}}
+    nav ul.open li{max-height:100px;}
+}

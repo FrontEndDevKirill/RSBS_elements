@@ -1,0 +1,104 @@
+ apply a natural box layout model to all elements */
+.carousel, .carousel *, .carousel:before, .carousel:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Resolve rendering bug in safari 6.0.5 */
+.carousel ul, .carousel li {
+    -webkit-backface-visibility: hidden;
+}
+.carousel {
+    display:block; 
+    max-width:100%;
+    overflow:hidden;
+    position:relative;
+}
+.carousel-title {display:block;}
+
+.carousel ul{display:block; list-style:none; min-width:100%; border-top:1px solid #eee; overflow:hidden; white-space:nowrap; margin:0 -15px; padding:5px 0px; text-indent:0;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+.carousel li {display:inline-block; vertical-align:top; margin:0; width:25%; white-space:normal; background:none; border:0px dotted red;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
+}
+.carousel.resizing li {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.carousel li {width:25%;}
+.carousel li > div {margin:0 15px;}
+.carousel li > a {display:block; margin:0 15px;}
+
+.carousel-button-wrapper {
+    display:block; position:relative; float:right;
+}
+
+a[href^="#carousel-button"]{
+display:inline-block; padding:5px; margin:0 0 5px 5px; background-color:#eee; text-align:left; border:1px solid #666;
+    text-decoration:none;
+}
+a[href^="#carousel-button"].frozen{
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* NEW Test style */
+/*section {width:50%;}*/
+#carouselTwo.carousel li {width:100%;}
+#carouselThree.carousel li a {
+    outline:1px solid white;
+    opacity: 0.5;
+}
+#carouselThree.carousel li a.active {
+    outline:1px solid white;
+    opacity: 1;
+}
+
+/*! Media queries... 
+ * OR include the stunnplate/lib/vendor/elementQuery to use Element Queries (see below)
+ */
+
+@media only screen and (max-width: 768px) {
+    .carousel li {
+        width:33.333%;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .carousel li {
+        width:50%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .carousel li {
+        width:100%;
+    }
+    .carousel-title {display:none;}
+}
+
+/*! Example using Element Queries... 
+ * @Requires https://github.com/tysonmatanich/elementQuery (stunnplate/lib/vendor/elementQuery.min.js) 
+ * The following uses a JS element query plugin (insead of a media-query) to style the tabbed content when they are less than 300px wide.
+ * The plugin looks for [min/max]-[width/height] space-separated attribute selectors eg: element[min-width~="200px"][max-width~="400px"]{background-color:red;}
+
+.carousel[max-width~="500px"] li {
+    width:33.333%;
+}
+.carousel[max-width~="360px"] li {
+    width:50%;
+}
+.carousel[max-width~="360px"] .carousel-title {
+    display:none;
+}
+.carousel[max-width~="200px"] li {
+    width:100%;
+}

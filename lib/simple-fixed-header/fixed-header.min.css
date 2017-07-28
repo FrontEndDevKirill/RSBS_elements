@@ -1,0 +1,2 @@
+.fixed-header{display:block;position:relative;width:100%;z-index:999;top:0;left:0 right:0}.fixed-header.fixed{position:fixed}@media only screen and (max-width:720px){.fixed-header{position:relative}
+}

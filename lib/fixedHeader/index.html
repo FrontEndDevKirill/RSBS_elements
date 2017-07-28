@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Header with autohide and reveal</title>
+    <link rel="stylesheet" href="fixedheader.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- http://jsfiddle.net/moob/6ndDB/ -->
+    <style>
+    html, body {margin:0px;}
+    </style>
+</head>
+<body style="font-family:sans-serif; min-height:300px">
+
+
+
+<div id="fixedHeaderExample" class="fixedHeader no-js" >
+    <div class="fixedHeader-revealableWrapper">
+        <div class="fixedHeader-revealableContent">
+            <p>For the benefit of users with JS disabled, #fixedHeader-revealableContent should *not* have any padding.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore.</p>
+        </div>
+        <div class="fixedHeader-revealableTrigger">click me!</div>
+    </div>
+     <h1>I'm a fixed header</h1>
+    <div class="fixedHeader-menu"><a href='#' class="fixedHeader-trigger">Menu Trigger</a>
+        <ul>
+            <li><a href=''>item</a></li>
+            <li><a href=''>item</a></li>
+            <li><a href=''>item</a></li>
+        </ul>
+    </div>
+</div>
+<div style="padding:30px">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore. Nihil veritatis consequuntur excepturi distinctio laborum aliquam illo expedita, sapiente.</p>
+    <p>Illum repellat delectus nam, quos officia! Dolor fuga, temporibus consequuntur.</p>
+    <p>Molestias iste odio dicta, a praesentium fugiat quidem suscipit. Tenetur. Animi labore, rem, numquam provident voluptatibus corrupti nostrum eos ab! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eos!</p>
+    <p>Aspernatur illo expedita tenetur beatae commodi, voluptates saepe itaque ea.</p>
+    <p>Molestias voluptatum fugiat fugit, commodi, harum illo cum voluptates odio! Consequatur id, dolores maxime officia porro rerum iure error ea.</p>
+    <p><a id="test" href="#">Example link that triggers opening of the reveavable content</a> (this is NOT part of the plugin but an example of how you might interact with it if needed)</p>
+    <p><strong>Show/hide menu based on scroll position</strong> (this is NOT part of the plugin but an example of how you might interact with it if needed)</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, numquam.</p>
+    <p>Sint architecto tempora explicabo incidunt rerum harum modi ad, facilis.</p>
+    <p>Laudantium vitae laboriosam distinctio aspernatur quia, culpa natus, magnam est.</p>
+    <p>Velit veritatis autem voluptas quia, numquam dignissimos nihil quod fuga. Voluptas aliquam soluta non nemo quas ipsum quaerat, inventore consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, illo! Recusandae quasi, eveniet laboriosam ab nobis placeat laudantium repellendus pariatur?</p>
+    <p>Aut vero, alias similique delectus commodi explicabo culpa quam officia!</p>
+    <p>Perferendis inventore soluta ea ad voluptatibus repudiandae laudantium dolorem molestiae Deserunt facere aliquam, fuga animi minus dolorum consectetur, veniam qui!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, aperiam.</p>
+    <p>Voluptatum sunt suscipit amet, vero quibusdam obcaecati eaque, illum? Optio!</p>
+    <p>Voluptatum architecto necessitatibus expedita accusantium, illum nesciunt. Similique, inventore, eum. Quam libero mollitia reprehenderit, quis nesciunt maxime recusandae eos vitae.</p>
+    <p>Dignissimos quasi porro reprehenderit ex explicabo, deleniti aliquid, consectetur quisquam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, expedita! Maiores ipsa voluptas, eveniet omnis molestias debitis quis quo, libero.</p>
+    <p>Nisi repellat accusantium aliquid illo tenetur aspernatur placeat, hic recusandae.</p>
+    <p>Ullam accusamus officia vero consequuntur, eveniet nulla ab maiores ad. Ex, excepturi. Suscipit ipsum, impedit at deleniti, cum nisi molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, dolor. Officiis nam animi placeat optio sint architecto eaque quod libero. Qui enim explicabo sapiente vitae, veniam voluptatem optio suscipit itaque.</p>
+    <p>Saepe repellendus modi, voluptatum adipisci quisquam. Consequuntur esse, amet sequi.</p>
+    <p>Expedita sunt, facere perferendis commodi praesentium nobis aspernatur. Possimus, libero.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, excepturi.</p>
+    <p>Praesentium expedita omnis rem beatae, pariatur vero dolor saepe libero! Placeat sint architecto modi, laborum ducimus voluptas, doloribus eligendi vel.</p>
+    <p>Quam voluptatem, laborum nihil tenetur hic esse voluptates atque ad.</p>
+    <p>Ex voluptates recusandae adipisci soluta atque animi, veniam repellat, laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, placeat. Ipsum eligendi suscipit, debitis repellat a natus facilis atque in.</p>
+    <p><strong>Voluptatum</strong> enim iste omnis nam, qui eligendi incidunt quasi modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore. Nihil veritatis consequuntur excepturi distinctio laborum aliquam illo expedita, sapiente.</p>
+    <p>Illum repellat delectus nam, quos officia! Dolor fuga, temporibus consequuntur.</p>
+    <p>Molestias iste odio dicta, a praesentium fugiat quidem suscipit. Tenetur. Animi labore, rem, numquam provident voluptatibus corrupti nostrum eos ab! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eos!</p>
+    <p>Aspernatur illo expedita tenetur beatae commodi, voluptates saepe itaque ea.</p>
+    <p>Molestias voluptatum fugiat fugit, commodi, harum illo cum voluptates odio! Consequatur id, dolores maxime officia porro rerum iure error ea.</p>
+    <p>Ipsam, qui explicabo inventore atque rem recusandae autem voluptatum soluta!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, numquam.</p>
+    <p>Sint architecto tempora explicabo incidunt rerum harum modi ad, facilis.</p>
+    <p>Laudantium vitae laboriosam distinctio aspernatur quia, culpa natus, magnam est.</p>
+    <p>Velit veritatis autem voluptas quia, numquam dignissimos nihil quod fuga. Voluptas aliquam soluta non nemo quas ipsum quaerat, inventore consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, illo! Recusandae quasi, eveniet laboriosam ab nobis placeat laudantium repellendus pariatur?</p>
+    <p>Aut vero, alias similique delectus commodi explicabo culpa quam officia!</p>
+    <p>Perferendis inventore soluta ea ad voluptatibus repudiandae laudantium dolorem molestiae Deserunt facere aliquam, fuga animi minus dolorum consectetur, veniam qui!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, aperiam.</p>
+    <p>Voluptatum sunt suscipit amet, vero quibusdam obcaecati eaque, illum? Optio!</p>
+    <p>Voluptatum architecto necessitatibus expedita accusantium, illum nesciunt. Similique, inventore, eum. Quam libero mollitia reprehenderit, quis nesciunt maxime recusandae eos vitae.</p>
+    <p>Dignissimos quasi porro reprehenderit ex explicabo, deleniti aliquid, consectetur quisquam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, expedita! Maiores ipsa voluptas, eveniet omnis molestias debitis quis quo, libero.</p>
+    <p>Nisi repellat accusantium aliquid illo tenetur aspernatur placeat, hic recusandae.</p>
+    <p>Ullam accusamus officia vero consequuntur, eveniet nulla ab maiores ad. Ex, excepturi. Suscipit ipsum, impedit at deleniti, cum nisi molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, dolor. Officiis nam animi placeat optio sint architecto eaque quod libero. Qui enim explicabo sapiente vitae, veniam voluptatem optio suscipit itaque.</p>
+    <p>Saepe repellendus modi, voluptatum adipisci quisquam. Consequuntur esse, amet sequi.</p>
+    <p>Expedita sunt, facere perferendis commodi praesentium nobis aspernatur. Possimus, libero.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, excepturi.</p>
+    <p>Praesentium expedita omnis rem beatae, pariatur vero dolor saepe libero! Placeat sint architecto modi, laborum ducimus voluptas, doloribus eligendi vel.</p>
+    <p>Quam voluptatem, laborum nihil tenetur hic esse voluptates atque ad.</p>
+    <p>Ex voluptates recusandae adipisci soluta atque animi, veniam repellat, laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, placeat. Ipsum eligendi suscipit, debitis repellat a natus facilis atque in.</p>
+    <p>Voluptatum enim iste omnis nam, qui eligendi incidunt quasi modi.</p>
+</div>
+
+
+
+<script src="fixedheader.js"></script>
+<script>
+    /*
+     * Example function to open/close the menu based on scroll position:
+     */
+    var distance = 500,
+        revealed = false;
+    $(window).on('scroll', function () {
+        var scrolltop = parseInt($(window).scrollTop());
+        if(scrolltop>=distance && !revealed){
+            $(".fixedHeader-menu > ul").trigger("open");
+            revealed = true;
+        }
+        if(scrolltop<distance && revealed){
+            $(".fixedHeader-menu > ul").trigger("close");
+            revealed = false;
+        }
+    });    
+    /*
+     * Example of how you might trigger the opening of the revealable content from outside of the function
+     */
+    $("#test").on("click", function(){
+        $(".fixedHeader-revealableContent").trigger("open");
+        return false;
+    });
+</script>
+</body>
+</html>

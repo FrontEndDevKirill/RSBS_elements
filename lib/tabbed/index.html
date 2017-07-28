@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbed</title>
+    <link rel="stylesheet" href="tabbed.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../vendor/elementQuery.min.js">/* optional - only required if using Element Queries in your CSS */</script>
+    <!-- http://jsfiddle.net/moob/39mug/ -->
+</head>
+<body style="font-family:sans-serif; min-height:300px">
+
+<div id="exampleWrapperForTesting" style="width:60%; margin:auto;">
+
+    <div class="tabbed">
+        <ul>
+            <li><a href="#t1">Tab jyt hy hgf hgf hgf hgfOne</a></li><!-- 
+            --><li><a href="#t2">Tab Two</a></li><!-- 
+            --><li><a href="#t3">Tab Three</a></li><!-- 
+            --><li><a href="#t4">Tab Four</a></li><!-- 
+            --><li><a href="#t5">Tab Five</a></li><!-- 
+            --><li><a href="#t6">Tab Six</a></li>
+        </ul>
+        <section id="t1">
+            <div>
+                <h1>content one</h1>
+                Please ensure that your content is wrapped in a div or something. DO NOT apply styles to the `section`
+            </div>
+        </section>
+        <section id="t2">
+            <div>
+                <h1>content two</h1>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.
+            </div>
+        </section>
+        <section id="t3">
+            <div>
+                <h1>content three</h1>
+                Fusce dapibus, tellus ac cursus commodo
+            </div>
+        </section>
+        <section id="t4">
+            <div>
+                <h1>content four</h1>
+                Making sure that nested li's work:
+                <ul>
+                    <li>an li</li>
+                    <li><a href="#dddddD">an li with a link</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="t5">
+            <div>
+                <h1>content five</h1>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.
+            </div>
+        </section>
+        <section id="t6">
+            <div>
+                <h1>content six</h1>
+                Fusce dapibus, tellus ac cursus commodo
+            </div>
+        </section>
+    </div>
+
+
+
+
+</div>
+<p style="position:fixed; bottom:0; margin:20px; padding:15px; background-color:rgba(255,0,0,.2); border-radius:10px; border:2px solid red;">
+    <strong>Please Note:</strong><br />
+    This demo uses elementQuery.js to conditionally style elements based on their current size. For security reasons <strong>Chrome</strong> browser will not allow elementQuery.js to read the css file when viewed locally (but it works on the server or in another browser)
+</p>
+
+<script src="tabbed.js"></script>
+
+</body>
+</html>

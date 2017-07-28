@@ -1,0 +1,169 @@
+/* apply a natural box layout model to all elements */
+.tabbed, .tabbed:before, .tabbed:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tabbed {
+    display:block;
+    position:relative;
+    background:#cccccc;
+    padding:4px 0 0 0;
+}
+.tabbed > ul {
+    display:none;
+    position:relative;
+    list-style:none;
+    padding:0;
+    margin:0 0 -1px 0;
+}
+.tabbed > ul {
+    display:block;
+    white-space:no-wrap;
+}
+.tabbed > ul li {
+    display:inline-block;
+    margin:0;
+}
+.tabbed > ul > li > a {
+    display:inline-block;
+    margin:0 0 0 4px;
+    border:1px solid black;
+    opacity:0.5;
+    background: #fff;
+    padding:10px;
+    border-radius:4px 4px 0 0;
+    text-decoration:none;
+    color:black;
+}
+.tabbed > ul > li.active > a {
+    opacity:1;
+    background: #fff;
+    border-bottom:1px solid white;
+}
+.tabbed > ul.isWrapping li a {
+    margin:0 -6px 4px 4px;
+    border:1px solid black!important;
+    border-radius:4px;
+}
+.tabbed .overflowTabsParent {
+    z-index:200;
+}
+.tabbed .overflowTabsParent:hover .overflowTabs {
+    display: block;
+}
+.tabbed .overflowTabs {
+    display: none;
+    margin: -1px 0 0 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    left:0px;
+    right:0px;
+    top: 100%;
+    min-width:200px;
+    border-top:1px solid #666;
+}
+.tabbed .overflowTabs li {
+    display: block;
+    width:100%;
+}
+.tabbed .overflowTabs li {
+    background-color:rgba(255, 255, 255, .9);
+}
+.tabbed .overflowTabs li a {
+    display:block;
+    margin:0;
+    padding:10px;
+    opacity:1;
+    border:1px solid #666;
+    border-radius:0;
+    border-top-width:0;
+}
+.tabbed .overflowTabs li a:hover {
+    color:red;
+    background-color:#fff;
+}
+.tabbed .overflowTabs li.active a {
+    color:#333;
+}
+.tabbed .overflowTabs li.active a:before {
+    content:' ';
+    display:inline-block;
+    vertical-align:middle;
+    width:0;
+    font-size:0;
+    border:6px solid transparent;
+    border-left-color:#333;
+}
+.tabbed > section {
+    display:none;
+    border: 1px solid black;
+    background: #fff;
+}
+.tabbed > section.open {
+    display:block;
+}
+.tabbed > section > a {
+    display:none;
+}
+.tabbed > section > div {
+    display:none;
+    padding:0;
+    margin:0;
+}
+.no-js .tabbed > section > div {
+    /* using jQuery instead of these dodgy css animations
+    max-height:0px; height:0; overflow:hidden;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;*/
+}
+.no-js .tabbed > section.open > div {
+    /* dont edit me (see next comment below) */
+    display:block;
+    height:100%;
+    max-height:1000px;
+}
+.tabbed > section > div > div {
+    /* JS wraps our content in another div (required for the concertina view). So although it doesnt look right, this is the correct selector for our section > content block. These may be custom styled and should be where any padding is added if required */
+    padding:20px;
+    border-bottom:1px solid black
+}
+#testContainer {
+    max-width:70%;
+    border:1px dotted red;
+}
+/*! Element Query... 
+ * @Requires https://github.com/tysonmatanich/elementQuery (stunnplate/elementQuery.min.js) 
+ * The following uses a JS element query plugin (insead of a media-query) to style the tabbed content when they are less than 300px wide.
+ * The plugin looks for [min/max]-[width/height] space-separated attribute selectors eg: element[min-width~="200px"][max-width~="400px"]{background-color:red;}
+ */
+.tabbed[max-width~="300px"] {
+    padding:0;
+    border:1px solid black;
+    border-width:0px 1px;
+}
+.tabbed[max-width~="300px"] > ul {
+    display:none;
+}
+.tabbed[max-width~="300px"] > section {
+    display:block;
+    background:white;
+    border:0;
+}
+.tabbed[max-width~="300px"] > section > a {
+    display:block;
+    border:1px solid black;
+    border-width:1px 0;
+    padding:20px;
+    background:#eee;
+    text-decoration:none;
+}
+.tabbed[max-width~="300px"] > section.active > a {
+    background:#fff;
+}
+.tabbed[max-width~="300px"] > section > div {
+}
+/* END Element Queries */

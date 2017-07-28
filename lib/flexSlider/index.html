@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Slider</title>
+    <link rel="stylesheet" href="flexSlider.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- http://jsfiddle.net/moob/9dHSU/ -->
+    <style>
+        /* local styles for demo only > */
+        html, body {
+            margin:0;
+        }
+        #aParent {
+            min-height:200px;
+            background-color:#666;
+            position:relative;
+        }
+        h1,h2,h3,h4,h5{
+            margin:.5em;
+        }
+        #aParent ul > li{
+            /* funky text stylng that can be seen on any colour background */
+            
+            font-family:Georgia, serif;
+            font-size:200%;
+            color: #000;
+            text-shadow:
+                .2em .2em .5em #000,
+                -1px -1px 0 #fff,  
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+            padding-top:30px;
+            
+        }
+        /* example custom animations */
+        .flexSlider .current [class*="animate-in-"].animate-custom-a {
+            -webkit-transition-delay: 1000ms; 
+            transition-delay: 1000ms;
+            color:#990000;
+        }
+        .flexSlider .current [class*="animate-in-"].animate-custom-b {
+            -webkit-transition-delay: 400ms; 
+            transition-delay: 400ms;
+            -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+        }
+        .flexSlider [class*="animate-in-"].animate-custom-c {
+            font-size:0%;
+        }
+        .flexSlider .current [class*="animate-in-"].animate-custom-c {
+            -webkit-transition-delay: 600ms; 
+            transition-delay: 600ms;
+            color:#333;
+            font-size:100%;
+        }
+        /* example media-query */
+        @media only screen and (max-width : 400px) {
+            #aParent {
+                border:0px solid green;
+                min-height:0;
+                height:200px!important;
+                max-height:200px!important;
+            }
+        }
+        /* < for demo only */
+    </style>
+</head>
+<body>
+
+<div id="aParent">
+    <div class="flexSlider">
+        <ul>
+            <li style="background-image:url('http://lorempixel.com/400/200/')">
+                <h2 class="animate-in-from-left">Slide 1</h2>
+                <h1 class="animate-in-from-bottom animate-custom-b">lorem</h1>
+                <h4 class="animate-in-from-right animate-custom-c">and of course...</h4>
+                <h3 class="animate-in-from-top animate-custom-a">ipsum</h3>
+            </li>
+            <li style="background-image:url('http://lorempixel.com/400/300/')">
+                <h1 class="animate-in-from-top">One helluvalotta text that will force this slide open and make the whole slider equally large</h1><h4 class="animate-in-from-right animate-custom-c">(unless you set a max-height in the css)</h4>
+            </li>
+            <li style="background-image:url('http://lorempixel.com/400/400/')"><h2 class="animate-in-from-right">Slide 3</h2><h2 class="animate-in-from-top animate-custom-c">Egestas Mollis Tristique</h2></li>
+        </ul>
+    </div>
+</div>
+<div style="margin:20px">
+     <h3>Responsive background slider thing</h3>
+
+    <p><strong><em>FlexSlider will automatically be initialised on elements with the class of .flexSlider</em></strong> but you can set up a custom version as required. To do so dont use the 'flexSlider' classname and call the plugin on dom ready (passing your required settings):</p>
+    <code><pre>
+$('#myFlexSlider').flexSlider({
+    loop: true, //loop back to start else stop at end
+    transitionSpeed : 600, //slide animation speed (milliseconds)
+    cycle : 6000, //if >0 automatically cycle through slides every x milliseconds (pauses on hover)
+    complete: function(){alert('Slider is ready!')} //optional callback
+});</pre>
+    </code>
+    
+<p><strong>Animated Slide Text</strong><br />
+    Your text can be animated when the slide comes into view. Style and position the elements as you like then apply one of the following classnames. Don't edit the '.animate-in-from-' styles unless you know what you are doing ;) Also, if you use your own animators you should separarate your style from the animations and give your animation-only styles a classname that begins 'animate-'. This is because the script needs to measure the dimensions of each slide as it will be once tha animation is complete (it therefore removes this classname when getting measuring the slide and re-applies it after.</p>
+<code><pre>
+.animate-in-from-left
+.animate-in-from-right
+.animate-in-from-top
+.animate-in-from-bottom</pre>
+</code>
+
+</div>
+
+
+<!-- include touchListener if you want to be able to drag and swipe -->
+<script src="../../lib/touchListener/touchListener.js"></script>
+
+<script src="flexSlider.js"></script>
+
+
+</body>
+</html>

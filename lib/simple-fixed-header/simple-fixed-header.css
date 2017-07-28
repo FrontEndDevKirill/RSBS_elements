@@ -1,0 +1,35 @@
+/**
+ *  
+ *  Stunnplate Fixed Header
+ *
+ *  Version: 1.0
+ *  Last Updated: 26/06/14
+ *  By: Mark
+ *  
+ *  Notes:
+ *  Fixed Header CSS
+ *
+ *  Changelog:
+ *  26/06/14
+ *  Separated out from main for use with Sublime Concat and library structure
+ * 
+ */
+
+.fixed-header {
+    display:block; position:relative; width:100%; z-index:999; top:0; left:0 right:0;
+    /* make :fixed if scroll-top > x */
+}
+.fixed-header.fixed {
+    position:fixed;
+}
+
+/*-------------------------------------------------------*/
+/*- MEDIA QUERIES                                       -*/
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/*- 720                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 720px) {
+    .fixed-header {position:relative;}
+}

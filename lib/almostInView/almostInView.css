@@ -1,0 +1,17 @@
+/* 
+Basic animation is baked-in. To use custom animations you should set settings.speed:0
+then create css animations yourself. These are the default classnames but they can be changed
+*/
+.out-of-view {
+    margin-top:200px;
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+}
+.in-view {
+    margin-top:20px!important;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
+}

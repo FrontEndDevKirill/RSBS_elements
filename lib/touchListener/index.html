@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Touch Listener</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- http://jsfiddle.net/moob/ZRhM8/ -->
+    <style>
+        /* This is a touch-event library so there are no associated styles. This is just for the demo */
+        body {font-family:sans-serif; margin:0;}
+        #test {
+            width: 100%;
+            min-width:100%;
+            max-width:100%;
+            max-height:100%;
+            height:200px;
+            padding:20px;
+            background-color:#ccc;
+            overflow:hidden;
+        }
+        #testEvent, #testData {pointer-events:none;}
+        #test strong {font-family:sans-serif}
+        #test em {color:#fff; font-style:normal; font-size:1.2em; text-decoration:none; text-shadow:0px 0px 3px black;}
+    </style>
+</head>
+<body>
+
+<div id="test">
+    <strong id="testEvent">Touch me baby...</strong>
+    <div id="testData"></div>
+</div>
+
+<script src="touchListener.js"></script>
+<script>
+$(function(){
+    /* attach touch-listener */
+    var testData = $("#testData");
+    var testEvent = $("#testEvent");
+
+    $("#test").touchListener()
+    .on('touchdown', function(e){   
+        var touchdata = $(this).data('touchdata');
+        testData.text(JSON.stringify(touchdata));
+        testEvent.html("You're <em>touching</em> but not moving.");
+    })
+    .on('stroke', function(){
+        var touchdata = $(this).data('touchdata');
+        testData.text(JSON.stringify(touchdata));    
+        testEvent.html("You're <em>stroking</em> me "+touchdata.distance.dd+" pixels at "+touchdata.degrees+" degrees from the touch origin.");
+    })
+    .on('strokeend', function(){
+        //not fired if swiped
+        //move or reset slide depending on how far dragged
+        var touchdata = $(this).data('touchdata');
+        testData.text(JSON.stringify(touchdata));
+        testEvent.html("You <em>stroked</em> me from the touch origin for "+touchdata.distance.dd+" pixels "+touchdata.direction+".");
+    })
+    .on('swipe', function(){ 
+        //not fired if dragged
+        //element was swiped
+        //get the direction
+        var touchdata = $(this).data('touchdata');
+        testData.text(JSON.stringify(touchdata));
+        var touchdata = $(this).data('touchdata');
+        testEvent.html("You <em>swiped</em> "+touchdata.distance.dd+" pixels "+touchdata.direction+".");
+    })
+    .on('touchup', function(){
+        //not fired if swiped or dragged
+        //the touched element was released
+        var touchdata = $(this).data('touchdata');
+        testData.text(JSON.stringify(touchdata));
+        testEvent.html("You <em>released</em> without dragging or swiping.");
+    });
+});
+</script>
+
+</body>
+</html>

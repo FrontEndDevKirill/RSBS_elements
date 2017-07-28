@@ -1,0 +1,63 @@
+.fixedHeader, .fixedHeader *, .fixedHeader:before, .fixedHeader:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* no js > */
+.fixedHeader.no-js {
+    position:relative;
+}
+.fixedHeader.no-js > .fixedHeader-revealableWrapper > .fixedHeader-revealableContent{
+    max-height:0;
+    padding:0;
+    overflow:hidden;
+}
+.fixedHeader.no-js > .fixedHeader-revealableWrapper:hover > .fixedHeader-revealableContent{
+    max-height:100%;
+    overflow:auto;
+}
+/* < end no js */
+.fixedHeader {
+    position:fixed;/* doesnt *have* to be fixed if you really want a inline version */
+    top:0;
+    left:0;
+    right:0;
+    background-color:blue;
+    z-index:999999;
+}
+/* revealable portion */
+.fixedHeader-revealableWrapper {
+    display:block;
+    position:relative;
+}
+.fixedHeader-revealableWrapper > .fixedHeader-revealableContent {
+    position:relative;
+    padding:60px;
+    background-color:#ee66ee;
+    /* JS limits the max height to 100% of the viewport but you can apply you own fixed pixel height override here if you NEED to: 
+    max-height:200px; 
+    */
+    overflow:auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.fixedHeader-revealableWrapper > .fixedHeader-revealableTrigger {
+    position:absolute;
+    top:100%;
+    margin:auto;
+    left:0;
+    right:0;
+    background-color:green;
+    width:30%;
+    text-align:center;
+}
+
+.touched {background-color:yellow!important;}
+
+/* You can optionally auto-hide the header when this is matched. The JS will test if the #fixedHeader has a page-break-after of 'always'. If so, it will apply the auto-hide methods. */
+@media only screen and (max-width: 460px) {
+    .fixedHeader {
+        background-color:purple;
+        page-break-after:always;/* it is assumed you have not set page-break-after on the #fixedHeader outer element (seems unlikely) */
+    }
+}

@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maps</title>
+    <link rel="stylesheet" href="../core/normalize.css" />
+    <link rel="stylesheet" href="../core/default.css" />
+    <link rel="stylesheet" href="../maps/maps.css" />
+    <link rel="stylesheet" href="maps.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  </head>
+  <body>
+    <h1>Google Maps Plugin</h1>
+    <div id="map1" class="map" data-latlng="-31.397,150.644" data-style='[ { "stylers": [ { "saturation": -100 } ] } ]' data-icon="../../img/marker.png" data-zoom="20" data-disableui="" />
+
+      <div class="map-marker" data-latlng="-34.397,150.644" data-icon="../../img/marker2.png" data-title="Marker 1">
+        Info Window Forever!
+      </div>
+
+      <div class="map-marker" data-latlng="-34.600,150.644" data-icon="" data-title="Marker 2">
+        SECOND INFO WINDOW
+      </div>
+
+    </div>
+
+    <div id="map2" class="map" data-latlng="-57.397,21.644" data-style='[ { "stylers": [ { "hue": "#ffee00" }, { "invert_lightness": true }, { "weight": 1.1 }, { "gamma": 1.26 }, { "saturation": -23 }, { "lightness": 8 } ] } ]' data-icon="" data-zoom="8" data-disableui="true" data-draggable="false"/>
+
+      <div class="map-marker" data-latlng="-57.397,21.644" data-icon="" data-title="Marker 1">
+        Info Window Forever!
+      </div>
+
+      <div class="map-marker" data-latlng="-57.600,21.644" data-icon="../../img/marker3.png" data-title="Marker 2">
+        SECOND INFO WINDOW
+      </div>
+
+    </div>
+
+    <div id="map3" class="map" data-latlng="52.476441,-1.909314" data-icon="" data-zoom="8">
+        <div class="map-marker" data-title="GEO" data-address="1 The Courtyard, Gas Street, Birmingham, B1 2JT">
+            Geocoded marker!
+        </div>
+    </div>
+
+    <div style="margin:30px 0; padding:15px; background-color:rgba(255,0,0,.2); border-radius:10px; border:2px solid red;">
+        <p ><strong>Settings</strong><br />
+        The map works by structuring your HTML in the following way:</p>
+        <div >
+            <code>
+                <xmp>
+                    <!-- Main Map Div-->
+                    <div id="map1" class="map" data-latlng="-34.397,150.644" data-style='[ { "stylers": [ { "saturation": -100 } ] } ]' data-icon="../../img/marker.png" data-zoom="1"/>
+                        <!-- Markers are added like so, within the map div: -->
+                        <div class="map-marker" data-latlng="-34.397,150.644" data-icon="../../img/marker2.png" data-title="Marker 1">
+                            Info Window Forever!
+                        </div>
+                        <!-- Second marker -->
+                        <div class="map-marker" data-latlng="-34.600,150.644" data-icon="" data-title="Marker 2">
+                            SECOND INFO WINDOW
+                        </div>
+                    </div>
+                </xmp>
+            </code>
+        </div>
+        <p>The main map div allows the following data attributes:
+            <ul>
+                <li>data-latlng     - If supplied, this will be the center point of the map (If not supplied, map will default to fit all markers</li>
+                <li>data-zoom       - If supplied, this will be the zoom level of the map</li>
+                <li>data-icon       - The default icon image</li>
+                <li>data-style      - Any styling to apply to the map in the form of a google map stylers JSON object (See useful links below</li>
+                <li>data-disableui  - Removes Google's standard interface (zoom, streetview, map/satellite etc.</li>
+                <li>data-scrollwheel- Set to "false" to disable zooming via scrollwheel</li>
+                <li>data-draggable  - Set to "false" to disable dragging</li>
+            </ul>
+        <p>Any markers should be included within the main map div containing any information to be included in that marker's info window. They take the following data attributes:
+            <ul>
+                <li>data-latlng - Marker location (latlng or address required)</li>
+                <li>data-address- Marker location in address form - will be geocoded by plugin (latlng or address required)</li>
+                <li>data-icon   - Overrides the default marker (either Google's or the map's default)</li>
+                <li>data-title  - The title of the marker</li>
+            </ul>
+        <h2>Useful Links:<h2>
+        <ul>
+            <li><a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html">Style Wizard</a></li>
+            <li><a href="https://developers.google.com/maps/documentation/javascript/styling#styling_the_default_map">Styling the Map</a></li>
+        </ul>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="maps.js"></script>
+</html>

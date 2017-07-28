@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="carousel.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../vendor/elementQuery.min.js">/* optional - only required if using Element Queries in your CSS */</script>
+    <!-- http://jsfiddle.net/moob/DeB3j/ -->
+    <style>
+    html {margin:0;}
+    body {margin:30px;}
+    .carousel li > div {background-color:#ddd; border:1px solid #aaa;}
+    </style>
+</head>
+<body style="font-family:sans-serif; min-height:300px">
+
+
+<section>
+    <div id="carouselTwo" class="carousel" data-step="1" data-disable-auto-height="0">
+        <div class="carousel-title">Carousel 1.0.5</div>
+        <ul>
+            <li><div class="padded white"><img src="http://placehold.it/420x220" style="width:100%" alt="example" />Item 1 Example your markup may differ.</div></li><!-- no spaces between inline blocks
+            --><li><div class="padded white"><img src="http://placehold.it/420x230" style="width:100%" alt="example" />item 2</div></li><!--
+            --><li><div class="padded white"><img src="http://placehold.it/420x240" style="width:100%" alt="example" />item 3</div></li><!--
+            --><li><div class="padded white"><img src="http://placehold.it/420x250" style="width:100%" alt="example" />item 4</div></li><!--
+            --><li><div class="padded white"><img src="http://placehold.it/420x260" style="width:100%" alt="example" />item 5 Carousel should resize height to only be as tall as the tallest cell in view</div></li><!--
+            --><li><div class="padded white"><img src="http://placehold.it/420x270" style="width:100%" alt="example" />item 6</div></li><!--
+            --><li><div class="padded white"><img src="http://placehold.it/420x280" style="width:100%" alt="example" />item 7</div></li>
+        </ul>
+    </div>
+    <div id="carouselThree" class="carousel" data-disable-auto-height="0">
+        <div class="carousel-title">You can link carousels so one controls the other...</div>
+        <ul>
+            <li><a href="#carouselTwo:1" class="padded white"><img src="http://placehold.it/420x220" style="width:100%" alt="example" /></a></li><!-- no spaces between inline blocks
+            --><li><a href="#carouselTwo:2" class="padded white"><img src="http://placehold.it/420x230" style="width:100%" alt="example" /></a></li><!--
+            --><li><a href="#carouselTwo:3" class="padded white"><img src="http://placehold.it/420x240" style="width:100%" alt="example" /></a></li><!--
+            --><li><a href="#carouselTwo:4" class="padded white"><img src="http://placehold.it/420x250" style="width:100%" alt="example" /></a></li><!--
+            --><li><a href="#carouselTwo:5" class="padded white"><img src="http://placehold.it/420x260" style="width:100%" alt="example" /></a></li><!--
+            --><li><a href="#carouselTwo:6" class="padded white"><img src="http://placehold.it/420x270" style="width:100%" alt="example" /></a></li><!--
+            --><li><a href="#carouselTwo:7" class="padded white"><img src="http://placehold.it/420x280" style="width:100%" alt="example" /></a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- include touchListener if you want to be able to drag and swipe -->
+<script src="../../lib/touchListener/touchListener.js"></script>
+
+<script src="carousel.js"></script>
+
+</body>
+</html>

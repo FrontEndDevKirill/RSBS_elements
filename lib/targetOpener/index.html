@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Target Opener</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- http://jsfiddle.net/moob/tR6AF/ -->
+    <style>
+        /* This plugin has no associated styles. Example styles for demo */
+        body {font-family:Arial, san-serif;}
+        #testWrapper {margin:10px; padding:10px; border:1px solid #666;}
+        #test1 {display:block; padding:20px;}
+        #test2 {display:block; padding:20px;}
+
+        .opened {text-decoration:none; background-color:#eeffee;}
+        .closed {text-decoration:none; background-color:#ffeeee;}
+        a.opened:before, a.closed:before  {content : "-"; text-decoration:none; color:#aaa; width:1em; display:inline-block; text-align:center;}
+        a.closed:before {content : "+";}
+
+        *[data-target-reveal*="open"].opened{cursor:not-allowed; display:none;}
+        *[data-target-reveal*="open"].opened:before{content:'/';}
+        *[data-target-reveal*="close"].closed{cursor:not-allowed; display:none;}
+        *[data-target-reveal*="close"].closed:before{content:'/';}
+
+        *[data-self-reveal*="open"]{}
+        *[data-self-reveal]{}
+
+        code {background-color:#eee; color:#111; padding:2px; display:inline; border-radius:5px; border:1px solid #fff;}
+        a code {background-color:#eeeeff;}
+
+        #notice {padding:5px; background-color:#ffeeee; border:1px solid #aa0000; border-radius:5px;}
+
+        .animwraptemp {outline:0px dotted red}
+
+        div[data-accordion] {border-bottom:1px solid #333;}
+        div[data-accordion] h5 {display:block; border-top:1px solid #333; margin:0; padding:3px; cursor:pointer;}
+        div[data-accordion] div div {display:block; padding:3px;}
+
+    </style>
+</head>
+<body>
+
+<a href='#test1' data-target-reveal=''>If i'm outside of the element on which this plugin is invoked so I should perform like an anchored link (assuming my target is visible)</a>
+
+<div id="testWrapper">
+    <h1>Generic Opener Oojit</h1>
+<p>The GOO is designed to allow you to toggle/open/close target elements by simply including a data-attribute in your markup. There are 3 methods for this: 
+    <br />
+    <code>data-target-reveal</code> - control the visibility of any id'ed element.<br />
+    <code>data-self-reveal</code> - hides self and append more/less controls to the element.<br />
+    <code>data-accordion</code> - invokes an accordion on the suitably formed element.
+</p>
+
+<p>
+    For example, here's a anchorred link to #test1. It's data-target-visibility is set with NO options:<br />
+    <a href='#test1' data-target-reveal=''><code>&lt;a href='#test1' data-target-reveal=''&gt;</code></a>
+    <br />
+    Toggle using the 'pop' animation:<br />
+    <a href='#test1' data-target-reveal='{"animation":"pop", "speed":"fast"}'><code>&lt;a href='#test1' data-target-reveal='{"animation":"pop"}'&gt;</code></a>
+    <br />
+    'fade' is supported but is shit:<br />
+    <a href='#test1' data-target-reveal='{"animation":"fade", "speed":100, "scrollToTarget":true}'><code>&lt;a href='#test1' data-target-reveal='{"animation":"fade"}'&gt;</code></a>
+    <br />
+    Open only ('drawer' animation):<br />
+    <a href='#test1' data-target-reveal='{"action":"open","animation":"drawer"}'><code>&lt;a href='#test1' data-target-reveal='{"action":"open","animation":"drawer"}'&gt;</code></a>
+     <br />
+    Close only:<br />
+    <a href='#test1' data-target-reveal='{"action":"close"}'><code>&lt;a href='#test1' data-target-reveal='{"action":"close"}'&gt;</code></a>
+    
+</p>
+    <div id="test1">
+        I'm only opened when you click on an anchorred link to me that contains the attribute <code>data-target-reveal</code>.<br />
+    <a href="#test1" data-target-reveal='{"action":"close","duration":100}'>close me fast</a><br />
+    <a href="#test1" data-target-reveal='{"action":"close","speed":20}'>close me at slow (just 20px per second)</a>
+</div>
+    
+<p id="notice"><strong>Important:</strong> <code>data-target-reveal</code> and <code>data-self-reveal</code> takes a JSON String so you <strong>MUST use double-quotes around the properties</strong>. <a href='#notice' data-target-reveal='{"state":"revealed","animation":"pop"}'>Dismiss</a></p>
+    
+
+    <p>
+        <br />
+        Toggle with a transition duration of 1 second using the default 'slide' animation:<br />
+        <a href="#test2" data-target-reveal='{"animation":"slide","duration":1000}'><code>&lt;a href="#test2" data-target-reveal='{"animation":"slide","duration":1000}'&gt;</code></a><br />
+        Toggle with a transition speed of 200 pixels per second using the 'drawer' animation:<br />
+        <a href="#test2" data-target-reveal='{"animation":"drawer","speed":200}'><code>&lt;a href="#test2" data-target-reveal='{"animation":"drawer","speed":200}'&gt;</code></a>
+    </p>      
+        
+    
+    
+    <div id="test2">
+    I'm test two. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum.
+
+Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.
+
+Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla.
+</div>
+    
+    
+    <h4>Anchored link toggler:</h4>
+    <ul>
+        <li><a href="#i3" data-target-reveal='unmatched'>3 asdas</a></li>
+        <li><a href="#i4" data-target-reveal='defaults'>4 asdas</a></li>
+        <li><a href="#i5" data-target-reveal='to'>5 asdas</a></li>
+        <li><a href="#i6" data-target-reveal='toggling'>6 asdas</a></li>
+    </ul>        
+    <div id="i3">#i3 here</div>
+    <div id="i4">#i4 here</div>            
+    <div id="i5">#i5 here</div>
+    <div id="i6">#i6 here</div>
+    
+    <h4>is different to an accordion:</h4>
+    <ul data-accordion=''>
+        <li><a href="">One</a><div>Tortor Ornare Ullamcorper</div></li>
+        <li><a href="">Two</a><div>Amet Mollis Lorem</div></li>
+        <li><a href="">Three</a><div>Venenatis Aenean Risus</div></li>
+    </ul>
+
+    <h4>(Psst... The accordian doesn't have to be a UL)</h4>
+    <div data-accordion='{"animation":"slide","speed":300,"state":"revealIndex0"}'>
+        <div>
+            <h5>I'm a H5</h5>
+            <div>I'm content in a div.</div>
+        </div>
+        <div>
+            <h5>But i could be a div</h5>
+            <div>I could be a p or something else (probably block-level unless you want dodgy rendering)</div>
+        </div>
+        <div>
+            <h5>or something else</h5>
+            <div>The accordian takes each click as a item and its first child as the trigger and the second child as the target</div>
+        </div>
+    </div>
+        
+    
+               
+    
+
+    
+    <hr />
+    
+    <div class="anewsitem">
+        <h1>First News Item</h1>
+        <p>Here is a summary</p>
+        <p data-self-reveal='{"animation":"drawer","speed":100,"openText":"Reveal Details", "closeText":"Hide Details"}'>Here is the detail. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+    <div class="anewsitem">
+        <h1>Second News Item</h1>
+        <div>It is possible to have revealable details <em>inline</em> rather than block-level <strong>but be wary of how styles may affect the animation</strong>... <span style="display:inline" data-self-reveal='{"openText":"More", "closeText":"Less", "animation":"drawer"}'>Nullam quis risus eget <img src="http://placehold.it/30/30" /> mollis mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</span> </div>
+        <div>In this case the use of the 'text' animation is recommended... <span style="display:inline" data-self-reveal='{"openText":"More", "closeText":"Less", "animation":"text"}'>but this is PURELY FOR TEXT ONLY. Images and other content will not be rendered. Nullam quis risus eget <img src="http://placehold.it/30/30" /> mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</span> </div>
+    </div>
+    <div class="anewsitem">
+        <h1>Third News Item</h1>
+        <p>The read-more link can be uni-directional (eg open-only with no facility to close it again).</p>
+        <p data-self-reveal='{"openText":"open me at JUST 10 PIXELS PER SECOND and remove this link", "speed":10}'>Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+    <div class="anewsitem">
+        <h1>Fourth News Item</h1>
+        <p>The read-less link can be close-only (but why would you want to?). More likely you may use a toggle but with the initial state opened.</p>
+        <p data-self-reveal='{"openText":"open", "closeText":"close", "state":"revealed", "duration":100}'>Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    </div>
+    
+    <hr />
+</div>
+     <a href='#test1' data-target-reveal=''>If i'm outside of the element on which this plugin is invoked so I should perform like an anchored link (assuming my target is visible)</a>       
+            
+
+<script src="targetOpener.js"></script>
+<script>
+/* This plugin is automatically invoked with the default setting on all matched elements within the body. If you want to envoke it with custom global settings (rather than change the inline settings for each instance) you can simply invoke the plugin again as follows:
+
+$(function(){
+    $("#testWrapper").targetOpener({
+        action: 'toggle',//'toggle', 'open', 'close'
+        animation: 'pop',//'slide','fade','drawer','pop','text'
+        duration: 300,//time taken to complete animation regardless of object size (in milliseconds or "slow", "normal", "fast" keyword)
+        speed: "fast", //if >0, the transition duration is calculated in based on this speed (in pixels per seconds or "slow", "normal", "fast" keyword)
+        easing: "swing", //standard jquery easing - 'swing' or 'linear'
+        scrollToTarget: false, //scrolls to target
+        ready: function(){alert("GOO is ready!");} //optional function callback on initialisation
+    });
+});
+ */
+</script>
+
+</body>
+</html>

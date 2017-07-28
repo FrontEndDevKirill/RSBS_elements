@@ -149,10 +149,10 @@ p {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: trasparent;
-  border: 1px solid #CCCCCC;
-  padding-left: 8px;
-  padding-bottom: 3px;
+  background-color: white;
+  border: 0px solid #CCCCCC;
+  padding-left: 6px;
+  padding-bottom: 6px;
   box-sizing: content-box;
   cursor: pointer;
 }
@@ -162,8 +162,8 @@ p {
   content: '✓';
   color: #fff;
   border: 0px solid black;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .text-in-input {
@@ -211,16 +211,27 @@ header {
 header .logo-header {
   float: left;
   margin-left: 53px;
+  width: 20%;
 }
 
 header ul {
   width: 60%;
   margin-top: 59.5px;
   margin-bottom: 80px;
-  margin-left: 100px;
+  margin-left: 150px;
   margin-right: 15px;
   display: inline-block;
   float: right;
+}
+
+header ul .header-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #F90049;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 30px;
 }
 
 header ul .search-ico img {
@@ -247,6 +258,7 @@ header ul .donate-header {
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  border: 1px solid rgba(36, 36, 36, 0);
   letter-spacing: 2px;
 }
 
@@ -283,4 +295,84 @@ header ul li a:before {
 
 header ul li:hover {
   cursor: pointer;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  margin-bottom: -30px;
+  width: 100%;
+  min-height: 700px;
+  height: 700px;
+  padding-top: 57px;
+  background-color: #020202;
+}
+
+footer .bottom-menu .bottom-menu-item {
+  list-style: none;
+}
+
+footer .bottom-menu .bottom-menu-item a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  line-height: 2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer .bottom-menu .bottom-menu-item a:before {
+  content: "";
+}
+
+footer .bottom-menu .bottom-menu-item a:hover {
+  color: #F90049;
+}
+
+footer .one-half {
+  position: relative;
+  display: inline-block;
+  width: 49.5%;
+  top: 0;
+}
+
+footer .one-half h2 {
+  color: #F90049;
+}
+
+footer .one-half p {
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: -1px;
+}
+
+footer .one-half .text-checkbox {
+  display: inline-block;
+}
+
+footer .one-half .text-checkbox p {
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+footer .one-half .checkbox-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -17.5px;
+}
+
+footer .footer-Block-one {
+  text-align: left;
+  padding-left: 89px;
+}
+
+footer .footer-Block-two {
+  text-align: right;
+}
+
+footer .footer-Block-two p {
+  margin-top: 20px;
+  width: 51%;
+  float: right;
 }

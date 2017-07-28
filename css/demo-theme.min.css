@@ -1,0 +1,6 @@
+body{font:16px/26px Helvetica,Helvetica Neue,Arial;background-color:#eee}.white{background-color:#fff}.footer .block{background-color:#ccc}#footer{background-color:#fff;margin-bottom:30px}
+html,body{margin:0}#aParent{min-height:200px;background-color:#666;position:relative}h1,h2,h3,h4,h5{margin:.5em}#aParent ul>li{font-family:Georgia,serif;font-size:200%;color:#000;text-shadow:.2em .2em .5em #000,-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;padding-top:30px}
+.flexSlider .current [class*="animate-in-"].animate-custom-a{-webkit-transition-delay:1000ms;transition-delay:1000ms;color:#900}
+.flexSlider .current [class*="animate-in-"].animate-custom-b{-webkit-transition-delay:400ms;transition-delay:400ms;-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+.flexSlider [class*="animate-in-"].animate-custom-c{font-size:0}.flexSlider .current [class*="animate-in-"].animate-custom-c{-webkit-transition-delay:600ms;transition-delay:600ms;color:#333;font-size:100%}
+@media only screen and (max-width :400px){#aParent{border:0 solid green;min-height:0;height:200px!important;max-height:200px!important}}@media only screen and (max-width:1170px){}

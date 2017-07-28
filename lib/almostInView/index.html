@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Almost In View</title>
+    <link rel="stylesheet" href="almostInView.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- http://jsfiddle.net/moob/q84eq/ -->
+    <style>
+    body {font-family:sans-serif; margin:0;}
+    .me, .not-me {padding:20px; border:1px solid #aaa; margin:20px;}
+    .not-me {
+        color:red;
+    }
+</style>
+</head>
+<body>
+
+<h1 style="margin:20px;">Almost In View</h1>
+<div style="margin:20px; padding:15px; background-color:rgba(255,0,0,.2); border-radius:10px; border:2px solid red;">
+
+<p>By default the plugin applies this method to items with the class .almost-in-view but you can initialise it in the standard jQuery way on any element you like.</p>
+<xmp>
+    $('.me').almostInView({            
+            speed: 1000, //ms (set to zero to use custom css animation)*
+            outOfViewClassName: 'out-of-view', //default classname for if custom css animations are used
+            inViewClassName: 'in-view', //default classname for if custom css animations are used
+            far: 200, //how far the out-of-view item is pushed away (in px)
+            near: 80, //the point at which the item is deemed to be 'almost' in view (in px)
+        });
+</xmp>
+
+<p>
+Basic animation is baked-in using jQuery.animate but you can use custom CSS animations should you wish:<br />
+Set <code>speed:0</code> to disable the built-in animation. The plugin then applies the appropriate classnames as the target elements come into view.
+</p>
+
+</div>
+
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, possimus.</p>
+    <p>Harum, praesentium sed debitis ipsam! Adipisci alias, obcaecati illo excepturi.</p>
+    <p>Hic dicta odit magnam sapiente voluptas quasi molestias adipisci possimus!</p>
+    <p>Culpa fugiat quas iure, vero recusandae, sit sequi accusamus? Doloribus.</p>
+    <p>Est dolorum, praesentium explicabo laborum rem autem beatae veniam ab!</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, temporibus.</p>
+    <p>Illo ea, est autem maiores. Sequi hic, reiciendis voluptatibus adipisci.</p>
+    <p>Enim, reprehenderit, beatae. Hic, eaque, quod. Tenetur deserunt esse quo.</p>
+    <p>Officiis consectetur eius, quo neque. In ea repellendus expedita. Dolorem.</p>
+    <p>Debitis numquam aliquid, minima facere quaerat, eaque distinctio modi? Tenetur.</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, perferendis.</p>
+    <p>Saepe voluptates fugiat similique soluta cumque vero sint iusto, accusantium!</p>
+    <p>Ut quaerat nam nostrum dolorum nisi atque, sapiente. Error, nobis?</p>
+    <p>Expedita excepturi sunt quas tempore non labore, sequi. Pariatur, libero.</p>
+    <p>Quis quisquam dolorum optio nam provident voluptas quam autem dignissimos!</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, pariatur.</p>
+    <p>Saepe, eligendi nihil totam dolorum reprehenderit! Repellat omnis neque quasi.</p>
+    <p>Eos cumque voluptatum placeat eius nisi facere neque nesciunt praesentium.</p>
+    <p>Eos qui consectetur voluptatem eum, labore accusamus tempora distinctio sunt?</p>
+    <p>Sint porro voluptas dolorem fugit, unde nihil laboriosam in perspiciatis.</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, sit.</p>
+    <p>A veritatis quis quae totam accusamus repellendus adipisci corporis soluta.</p>
+    <p>Debitis animi dolor distinctio ratione dolorum ex aperiam maiores fugit?</p>
+    <p>Incidunt non consequatur porro provident recusandae sunt architecto repellat enim.</p>
+    <p>Dignissimos aut repellat, dolorum adipisci nostrum magnam perferendis sequi ratione.</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit?</p>
+    <p>Neque tempora perferendis dolor, mollitia debitis sunt voluptas ea ut!</p>
+    <p>Maiores earum officia corporis, sint voluptatem, in laboriosam perferendis asperiores?</p>
+    <p>Odit dolor voluptate laboriosam voluptatem accusamus aperiam explicabo at provident.</p>
+    <p>Nemo sunt omnis eligendi possimus ex. Delectus ab deleniti veritatis.</p>
+</div>
+<div class="not-me">
+    <p>I'm totally normal</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, accusamus.</p>
+    <p>Quisquam architecto repellat facere amet sapiente dolore obcaecati harum fuga.</p>
+    <p>Tempora labore, unde necessitatibus ipsam repellat architecto, aliquam autem at.</p>
+    <p>Sapiente quis doloremque a illum, repellat, eius corporis ab placeat.</p>
+    <p>Deleniti sint nulla culpa nisi est alias iure quidem, veniam?</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, assumenda!</p>
+    <p>Nesciunt corrupti, eaque dolores ut libero ipsam dolorem laudantium saepe.</p>
+    <p>Similique quisquam quod esse expedita, voluptate quia nobis? Cum, tempore.</p>
+    <p>Amet voluptatem eaque non, praesentium tenetur molestias minima architecto laboriosam?</p>
+    <p>Nisi, sed corporis. Aliquid aperiam nihil fugit cum magnam at.</p>
+</div>
+<div class="me">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ex?</p>
+    <p>Perferendis hic, sint maxime similique quia autem cum quasi? Sed.</p>
+    <p>Nemo ratione aliquid itaque est blanditiis aliquam maiores veniam ab!</p>
+    <p>Reiciendis cumque fugit earum ea animi et aut molestiae dolores!</p>
+    <p>Quas rerum eum nostrum et quam veritatis ipsa, voluptatum placeat.</p>
+</div>
+
+
+
+
+<script src="almostInView.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background-color:#EEEEEE;
+}
+
+.white {background-color:#FFFFFF;}
+
+.footer .block {background-color:#CCCCCC;}
+#footer {background-color:#FFFFFF; margin-bottom:30px;}
+footer {}
+
+/* FlexSlider EXAMPLE STLES DEMO ONLY - COPIED FROM /lib/flexSlider/index: .html; */
+html, body {
+    margin:0;
+}
+#aParent {
+    min-height:200px;
+    background-color:#666;
+    position:relative;
+}
+h1,h2,h3,h4,h5{
+    margin:.5em;
+}
+#aParent ul > li{
+    /* funky text stylng that can be seen on any colour background */
+    
+    font-family:Georgia, serif;
+    font-size:200%;
+    color: #000;
+    text-shadow:
+        .2em .2em .5em #000,
+        -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    padding-top:30px;
+    
+}
+/* example custom animations */
+.flexSlider .current [class*="animate-in-"].animate-custom-a {
+    -webkit-transition-delay: 1000ms; 
+    transition-delay: 1000ms;
+    color:#990000;
+}
+.flexSlider .current [class*="animate-in-"].animate-custom-b {
+    -webkit-transition-delay: 400ms; 
+    transition-delay: 400ms;
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+.flexSlider [class*="animate-in-"].animate-custom-c {
+    font-size:0%;
+}
+.flexSlider .current [class*="animate-in-"].animate-custom-c {
+    -webkit-transition-delay: 600ms; 
+    transition-delay: 600ms;
+    color:#333;
+    font-size:100%;
+}
+/* example media-query */
+@media only screen and (max-width : 400px) {
+    #aParent {
+        border:0px solid green;
+        min-height:0;
+        height:200px!important;
+        max-height:200px!important;
+    }
+}
+/* < for demo only */
+
+
+
+/*-------------------------------------------------------*/
+/*- MEDIA QUERIES                                       -*/
+/*-------------------------------------------------------*/
+
+/* ===============
+    Maximal Width (above 1170px) - See Default
+   =============== */
+
+
+/*-------------------------------------------------------*/
+/*- 1170 Desk Wide                                      -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 1170px) {
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    article {
+
+
+    }
+
+    aside {
+
+
+    }
+}
+
+/*-------------------------------------------------------*/
+/*- 830                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 830px) { 
+
+}
+
+/*-------------------------------------------------------*/
+/*- 768 Tab Portrait                                    -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+}
+
+/*-------------------------------------------------------*/
+/*- 720                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 720px) {
+    
+}
+
+/*-------------------------------------------------------*/
+/*- 630                                                 -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 630px) {
+
+}
+
+/*-------------------------------------------------------*/
+/*- 568 Mobile                                          -*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 568px) {
+
+}

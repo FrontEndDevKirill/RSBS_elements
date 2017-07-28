@@ -1,0 +1,132 @@
+/* flexslider styles */
+.flexSlider {
+    width: 100%;
+    min-width:100%;
+    max-width:100%;
+    max-height:100%;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+    -webkit-backface-visibility:hidden;/* for safari */
+}
+.flexSlider.fill {
+    display:block; top:0; right:0; bottom:0; left:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:1;
+    height:100%; min-height:100%;
+}
+.flexSlider.fill ul {
+    display:block; top:0; right:0; bottom:0; left:0;
+    position:absolute;
+    height:100%; min-height:100%;
+}
+.flexSlider.fill ul li {
+    height:100%; min-height:100%;
+}
+.flexSlider.fill ul li:first-of-type, .flexSlider.fill ul li:last-of-type {    
+    box-shadow:0px 0 14px black;
+}
+.flexSlider ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 10000%;
+    display:block;
+}
+.flexSlider ul > li {
+    display:inline-block;
+    position:relative;
+    margin-right:-4px;
+    width:1%;
+    text-align: center;
+    vertical-align:top;
+    height:100%;
+    max-height:100%;
+    background: #666666 repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow:hidden;
+}
+.flexSlider-nextButton, .flexSlider-prevButton {
+    display:block;
+    min-height:100%;
+    position:absolute;
+    text-indent:-1000px; overflow:hidden;
+    z-index:100;
+    top:0;
+    bottom:0;
+    right:0;
+    width:120px;
+    opacity:0.2;
+    cursor:e-resize;
+}
+.flexSlider-nextButton:after, .flexSlider-prevButton:after {
+    content: '';
+    display:block;
+    position:absolute;
+    top:50%;
+    margin-top:-80px;
+    width:0; height:0;    
+    border:60px solid transparent;
+    border-width:80px 60px;
+}
+.flexSlider-nextButton:after {
+    border-left-color:white;
+    border-right-width:0;
+    right:20px;
+}
+.flexSlider-prevButton:after {
+    border-right-color:white;
+    border-left-width:0;
+    left:20px;
+}
+.flexSlider-prevButton {
+    right:auto;
+    cursor:w-resize;
+    left:0;
+}
+.flexSlider-nextButton:hover, .flexSlider-prevButton:hover {
+    opacity:0.8;
+}
+.flexSlider-dots {position:absolute; top:0; left:0; right:0; margin:auto; text-align:center; z-index:999;}
+.flexSlider-dots a {font-family:Arial serif;font-size:50px; color:rgba(255,255,255,.6); margin:0 4px; text-decoration:none; 
+        
+}
+.flexSlider-dots .current {color:white; text-shadow:0 0 2px #000, 0 0 1px #000;}
+/* 
+Animations. 
+A basic 'slide-in' animation is included but you can roll-your-own.
+Please ensure that you separarate your style from the animation (IE have two classes) and give your animation-only styles a classname that begins 'animate-'. The script needs to measure the dimensions of each slide as it will be once the animation is complete, it therefore temporarily removes the 'animate-' prefixed classnames when getting measuring the slide and re-applies them after.
+*/
+.flexSlider [class^="animate-in-"]{
+    -webkit-transition: all 1400ms;
+    -moz-transition: all 1400ms;
+    -o-transition: all 1400ms;
+    transition: all 1400ms;
+    position:absolute;
+    width:0; height:0;
+    overflow:hidden;
+}
+.flexSlider .current [class*="animate-in-"]{
+    width:auto; height:auto; overflow:visible;
+    position:relative;
+}
+.flexSlider .notransition {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    margin:0;
+}
+.flexSlider .animate-in-from-left {left:-100%;}
+.flexSlider .animate-in-from-right {right:-100%;}
+.flexSlider .animate-in-from-top {bottom:100%;}
+.flexSlider .animate-in-from-bottom {top:100%;}
+.flexSlider .current .animate-in-from-left {left:0;}
+.flexSlider .current .animate-in-from-right {right:0;}
+.flexSlider .current .animate-in-from-top {bottom:0;}
+.flexSlider .current .animate-in-from-bottom {top:0;}

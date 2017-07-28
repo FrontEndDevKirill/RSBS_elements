@@ -1,0 +1,52 @@
+/*!
+ *  Stunnplate style.css
+ *  Version: 0.8
+ */
+/*
+ *  Notes:
+ *  Main CSS file to include entire library followed by custom styles.
+ * 
+ */
+
+/*-------------------------------------------------------*/
+/*- FONTS                                               -*/
+/*-------------------------------------------------------*/
+/*MG Fonts have to go first! */
+
+/*-------------------------------------------------------*/
+/*- IMPORT LIBRARY                                      -*/
+/*-------------------------------------------------------*/
+
+/* Normalise */
+@import url('../lib/core/normalize.css');
+
+/* Core */
+@import url('../lib/core/default.css');
+
+/* Modules */
+/*@!import url('../lib/simple-fixed-header/simple-fixed-header.css');*/
+@import url('../lib/fixedHeader/fixedheader.css');
+@import url('../lib/layout/layout.css');
+@import url('../lib/nav/nav.css');
+@import url('../lib/tabbed/tabbed.css');
+@import url('../lib/modal/modal.css');
+@import url('../lib/carousel/carousel.css');
+/*@!import url('../lib/almostInView/almostInView.css');*/
+@import url('../lib/maps/maps.css');
+@import url('../lib/flexSlider/flexSlider.css');
+
+
+/* Vendor */
+/* No vendor CSS as yet */
+
+/*-------------------------------------------------------*/
+/*- THEME - Theme Name replace demo-theme with theme    -*/
+/*-------------------------------------------------------*/
+@import url('demo-theme.css');
+
+
+
+/*-------------------------------------------------------*/
+/*-     PRINT STYLES                                    -*/
+/*-------------------------------------------------------*/
+@import url('../lib/core/print.css');

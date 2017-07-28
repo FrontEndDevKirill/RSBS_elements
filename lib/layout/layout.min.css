@@ -1,0 +1,12 @@
+/*!
+ *  Stunnplate layout.css
+ *  Version: 1.1.2
+ *
+ */.bounds{width:100%;margin:0 auto;max-width:1234px}.table{display:table;width:100%;border-spacing:32px 0}.tablesque{display:block;margin:0 32px 0 32px}
+[class^="table"]{margin-bottom:32px}.block{display:table-cell;margin-bottom:32px;vertical-align:top}.padded{padding:5px}.block.one{width:100%}
+.block.one-half{width:50%}.block.one-third{width:33.33%}.block.two-third{width:66.66%}.block.one-fourth{width:25%;empty-cells:show}.block.three-fourth{width:75%}
+.block.aside{width:370px}.ie8 .bounds{min-width:830px!important}@media only screen and (max-width:830px){.block.aside{width:50%}}@media only screen and (max-width:768px){.block.one-half .table .block.one-half{display:inline-block;width:100%;padding:0}
+.block.one-half .table .block.one-half:last-child{margin-bottom:0}.block.one-fourth{empty-cells:hide;width:50%}}@media only screen and (max-width:630px){.block.one-third{display:inline-block;width:100%}
+.block.one-third:nth-of-type(3n){margin-bottom:0}}@media only screen and (max-width:568px){.table{border-spacing:10px 0}.block{display:inline-block;width:100%}
+.block.aside{width:100%}.block.one-half,.block.one-third,.block.two-third,.block.one-fourth,.block.three-fourth{width:100%}.block:last-child{margin-bottom:0!important}
+.block.one-fourth{empty-cells:show}.block>.block,.block>.block+.block{padding:0}}

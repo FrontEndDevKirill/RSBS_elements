@@ -1,0 +1,43 @@
+<!--[if lt IE 7]>      <html class="no-js oldie"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if !(IE)]><!--> <html class="no-js modern"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../core/default.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	<h1>Stunnplate Modal Example</h1>
+	<ul>
+		<!-- NON-AJAX MODAL - YOUD BEST MAKE ONE AT THE BOTTOM OF THE PAGE OR IT WILL CRY -->
+		<li><a class="modal-link" href="#modal">Click here for #id linked modal</a></li>
+
+		<!-- AJAX MODAL, AUTOMATICALLY GENERATES THE MODAL CODE IF URL IS EXTERNAL -->
+		<li><a class="modal-link" href="http://www.stunn.co.uk/stunnplate/index.html">Click here for an ajax modal</a></li>
+
+		<li><a class="modal-link" href="http://www.stunn.co.uk/stunnplate/img/kb-logo.png"><img src="http://placehold.it/420x292" alt=""></a></li>
+	</ul>
+
+	<!-- THIS CODE IS FOR NON-AJAX MODAL. IE CONTENT IS SET AND REMAINS ON PAGE. YOU'LL NEED ONE PER USE AND THE ID NEEDS TO CHANGE TO MATCH THE LINK -->
+	<div id="modal" class="modal-wrap">
+	    <div class="modal-overlay">
+	    	<div class="modal-close">X</div>
+		    <div class="modal-contentWrap">
+		    	<!--Feel free to add a header to your modal here, it might work, who knows? -->
+			    <div class="modal-content">
+			        <h1>Some text</h1>
+			        <p>But he stole up to us again, and suddenly clapping his hand on my shoulder, said&mdash;"Did ye see anything looking like men going towards that ship a while ago?"</p>
+			    </div>
+			    <!--You could try a footer too - why not be all fancy?-->
+			</div>
+	    </div>
+	</div>
+
+	<script src="modal.js"></script>
+</body>
+</html>

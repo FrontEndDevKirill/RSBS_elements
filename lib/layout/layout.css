@@ -1,0 +1,161 @@
+/*!
+ *  Stunnplate layout.css
+ *  Version: 1.1.2
+ *
+ */
+ /* 
+ *  Last Updated: 09/07/14
+ *  By: Mark
+ *  
+ *  Notes:
+ *  Default table-cell style layput
+ *
+ *  Changelog:
+ *  09/07/14
+ *  Added tablesque class and changed bottom margin to work with table class for section spacing consistency
+ * 
+ */
+
+/* ===============
+    Default Layout Elements
+   =============== */
+
+/*section {padding-bottom:30px;}*/
+
+.bounds {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table {display:table; /*table-layout:fixed;*/ width:100%; border-spacing:32px 0;}
+.tablesque {display:block; margin:0 32px 0 32px;}
+[class^="table"]{margin-bottom:0px;}
+
+.block {display:table-cell; margin-bottom:32px; vertical-align:top;}
+
+.padded {padding:5px;}
+
+/*.block > .block {display:inline-block; position:relative; width:100%; padding:0 15px 0 0; }
+.block > .block + .block {padding:0 0 0 15px;}*/
+
+/*.block > .block .content {padding:0;}*/
+
+
+/* ===============
+    Column widths
+   =============== */
+.block.one {width:100%;}
+.block.one-half { width: 50%; }
+.block.one-third  { width: 33.33%; }
+.block.two-third { width: 66.66%; }
+.block.one-fourth { width: 25%;  empty-cells:show;}
+.block.three-fourth { width: 75%; }
+
+/*.injectedTableRow {display:table-row; border:1px solid red;}*/
+
+.block.aside {
+    width:370px;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie8 .bounds {min-width:830px!important;}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+/* ===============
+    Maximal Width (above 1170px) - See Default
+   =============== */
+
+
+@media only screen and (max-width: 1170px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+
+
+/* ============
+    WIDE: Main
+   ============ */
+
+}
+
+@media only screen and (max-width: 830px) { 
+/* ====================
+    Custom: To balance 2/3 1/3 width at smaller sizes
+   ==================== */   
+
+   .block.aside {width:50%;} 
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+/* ============
+    INTERMEDIATE: Main
+   ============ */
+
+.block.one-half .table .block.one-half {display:inline-block; width:100%; padding:0;}
+.block.one-half .table .block.one-half:last-child {margin-bottom:0;}
+
+/* ====================
+    Custom: To wrap 4 col to 2 col (handled with js)
+   ==================== */
+
+   .block.one-fourth {
+        empty-cells:hide; /* (default is 'show') The JS function Split4Into2() splits rows of 4 into two rows of 2 where this matched */
+        width:50%;
+    }
+
+}
+
+
+@media only screen and (max-width: 720px) {
+ 
+}
+
+
+@media only screen and (max-width: 630px) {
+/* ====================
+    Custom: To make 3 col to 1 col
+   ==================== */
+
+  .block.one-third {display:inline-block; width: 100%;}
+  .block.one-third:nth-of-type(3n) {margin-bottom:0;}
+  /*span.tr {display:table-row;}*/
+}
+
+
+@media only screen and (max-width: 568px) {
+    .table {border-spacing:10px 0;}
+    .block {display:inline-block; width: 100%;}
+    .block.aside {width:100%;}
+
+
+/* ===============
+    Column widths
+   =============== */
+
+  .block.one-half,
+  .block.one-third,
+  .block.two-third,
+  .block.one-fourth,
+  .block.three-fourth { width: 100%; }
+
+  .block:last-child {margin-bottom:0!important;}
+
+  .block.one-fourth {
+    empty-cells:show;/* undo the JS Split4Into2() */
+  }
+
+  .block > .block,
+.block > .block + .block {padding:0;}
+}
