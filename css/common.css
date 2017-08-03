@@ -529,13 +529,20 @@ footer .footer-Block-two p {
   float: right;
 }
 
-.select .select-menu {
+.dropdown-list {
+  z-index: 1000;
+}
+
+.select {
   width: 364px;
+}
+
+.select .select-menu {
   height: 30px;
+  width: 100%;
 }
 
 .select .select-menu .textbox {
-  width: 364px;
   height: 30px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -582,9 +589,9 @@ footer .footer-Block-two p {
 }
 
 .select .dropdown-list {
+  width: 364px;
   display: none;
   margin-top: 4px;
-  width: 364px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
@@ -730,8 +737,30 @@ footer .footer-Block-two p {
   display: none;
 }
 
+.bounds {
+  margin-top: 5%;
+}
+
 .block-content-one .content-info {
   padding-left: 5%;
+}
+
+.block-content-one .content-info .article-data {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.block-content-one .content-info .select {
+  margin-bottom: 20px;
+}
+
+.block-content-one .content-info .select .select-menu {
+  width: 250px;
+}
+
+.block-content-one .content-info .select .dropdown-list {
+  width: 250px;
 }
 
 .block-content-one .content-info h1 {
@@ -745,7 +774,6 @@ footer .footer-Block-two p {
 
 .block-content-one .img-in-content .content-img {
   z-index: 1;
-  margin-left: 10px;
   width: 100%;
   height: 250px;
 }
@@ -756,20 +784,43 @@ footer .footer-Block-two p {
   z-index: 2;
   top: 0;
   right: 0;
-  margin-right: -10px;
   padding: 5px;
 }
 
 .block-content-two form {
-  margin-right: 20px;
   padding: 30px;
   background-color: #242424;
+}
+
+.block-content-two form .text-in-form-down {
+  margin-top: 50px;
+}
+
+.block-content-two form .text-in-form-down-bold {
+  font-weight: 600;
+}
+
+.block-content-two form .select {
+  margin-bottom: 20px;
 }
 
 .block-content-two form h1, .block-content-two form p {
   color: #fff;
   position: relative;
   z-index: 5;
+  margin-bottom: 35px;
+}
+
+.block-content-two form h1 {
+  width: 60%;
+}
+
+.block-content-two form p {
+  width: 73%;
+}
+
+.block-content-two form .form-item-info {
+  margin-bottom: 5px;
 }
 
 .block-content-two form .img-spot {

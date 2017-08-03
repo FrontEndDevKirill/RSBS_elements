@@ -506,13 +506,15 @@ footer{
 		}
 	}
 }
-
+.dropdown-list{
+	z-index: 1000;
+}
 .select{
+	width: 364px;
 	.select-menu{
-		width: 364px;
 		height: 30px;
+		width: 100%;
 		.textbox{
-			width: 364px;
 			height: 30px;
 			background-color: #ffffff;
 			border: 1px solid #cccccc;
@@ -558,9 +560,9 @@ footer{
 			display: block;
 			position: absolute;
 		}
+		width: 364px;
 		display: none;
 		margin-top: 4px;
-		width: 364px;
 		background-color: #ffffff;
 		border: 1px solid #cccccc;
 		ul{
@@ -696,8 +698,25 @@ footer{
     z-index: 999;
     display: none;
 }
+.bounds{
+	margin-top: 5%;
+}
 .block-content-one{
 	.content-info{
+		.article-data{
+			margin-bottom: 30px;
+			font-weight: 400;
+			font-size: 12px;
+		}
+		.select{
+			margin-bottom: 20px;
+			.select-menu{
+				width: 250px;
+			}
+			.dropdown-list{
+				width: 250px;
+			}
+		}
 		padding-left: 5%;
 		h1{
 			margin-top: 25px;
@@ -708,7 +727,6 @@ footer{
 		position: relative;
 		.content-img{
 			z-index: 1;
-			margin-left: 10px;
 			width: 100%;
 			height: 250px;
 		}
@@ -718,19 +736,36 @@ footer{
 			z-index: 2;
 			top: 0;
 			right: 0;
-			margin-right: -10px;
 			padding: 5px;
 		}
 	}
 }
 .block-content-two{
 	form{
+		.text-in-form-down{
+			margin-top: 50px;
+		}
+		.text-in-form-down-bold{
+			font-weight: 600;
+		}
+		.select{
+			margin-bottom: 20px;
+		}
 		h1,p{
 			color: #fff;
 			position: relative;
 			z-index: 5;
+			margin-bottom: 35px;
 		}
-		margin-right: 20px;
+		h1{
+			width: 60%;
+		}
+		p{
+			width: 73%;
+		}
+		.form-item-info{
+			margin-bottom: 5px;
+		}
 		padding: 30px;
 		background-color: #242424;
 		.img-spot{

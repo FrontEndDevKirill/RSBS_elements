@@ -6,14 +6,13 @@ $(document).ready(function () {
 		$(this).toggleClass("activate");
 	});
 	$(".select-menu").click(function () {
-		var dropdown = $(".dropdown-list");
+		var dropdown = $(this).siblings(".dropdown-list");
 		dropdown.toggleClass("active");
-		console.log("asdasd");
 	});
 	$(".item-dropdown").click(function () {
 		var text = $(this).text();
-		$(".text-input").val(text);
-		$(".dropdown-list").removeClass("active");
+		$(this).closest(".select").find(".text-input").val(text);
+		$(this).closest(".dropdown-list").removeClass("active");
 	});
 	$(document).mouseup(function(e)
 	{
